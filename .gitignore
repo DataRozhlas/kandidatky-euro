@@ -25,3 +25,6 @@ dist-ssr
 
 # downloaded data
 srv/data
+
+# key
+*.env
