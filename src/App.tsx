@@ -3,7 +3,7 @@ function App() {
 
   return (
     <>
-      <div className="text-2xl">
+      <div className="bg-zinc-100 max-w-[1070px] mx-auto">
         woe
       </div>
     </>
