@@ -11,6 +11,10 @@
     "production": "aws s3 sync dist s3://datarozhlas/kandidatky-euro --acl public-read --delete && aws cloudfront create-invalidation --distribution-id E3ABKG4QXPTL3P --paths '/kandidatky-euro/*'"
   },
   "dependencies": {
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-toggle": "^1.0.3",
+    "@radix-ui/react-toggle-group": "^1.0.4",
+    "@types/d3": "^7.4.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "d3": "^7.9.0",

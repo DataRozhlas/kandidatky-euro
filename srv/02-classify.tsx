@@ -32,7 +32,12 @@ for (const year of years) {
         const input = `${row.JMENO} ${row.PRIJMENI}, ${row.POVOLANI}`;
         const sex = await askAI(input);
         console.log(year, input, sex);
-        results.push({ ...row, POHLAVI: sex ?? '' });
+        results.push({
+            ...row, POHLAVI: sex ?? '',
+            JMENO: row.JMENO ?? '',
+            PRIJMENI: row.PRIJMENI ?? '',
+            POVOLANI: row.POVOLANI ?? ''
+        });
     }
 
     Bun.write(`srv/data/${year}/eprk_sex.csv`, csvFormat(results));
