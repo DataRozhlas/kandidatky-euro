@@ -189,8 +189,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 7	17	Marie	Pozděnová			54	CZ	drážní obsluha	Mladá Boleslav	535419	11	11	A	61	0	N	0	0	F	2009	11
 7	18	Miloslav	Chudáček			61	CZ	tesař	Chrást	564249	11	11	A	11	0	N	0	0	M	2009	11
 7	19	Jaroslav	Louda			55	CZ	malíř	Jablonec nad Nisou	563510	11	11	A	8	0	N	0	0	M	2009	11
-7	20	Registrační úřad ponechal pozici volnou	Kandidát v registraci škrtnut										N	0	0	N	0	0	F	2009	11
-7	21	Registrační úřad ponechal pozici volnou	Kandidát v registraci škrtnut										N	0	0	N	0	0	M	2009	11
 7	22	Pavel	Konjata			37	CZ	hygienický pracovník	Chválenice	557846	11	11	A	10	0	N	0	0	M	2009	11
 8	1	Ivan	Šterzl	Prof. MUDr.	CSc.	55	CZ	lékař	Praha	1	99	175	A	341	0	N	0	0	M	2009	175
 8	2	Vilém	Mikula	Mgr.		45	CZ	odborný pracovník NASA	Tábor	552046	99	175	A	131	0	N	0	0	M	2009	175
@@ -198,7 +196,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 8	4	Rudolf	Klinger	Mgr.		58	CZ	odborný pedagog	Modletice	598267	99	175	A	31	0	N	0	0	M	2009	175
 8	5	František	Krejča	PhDr.		55	CZ	etnograf	Křemže	545571	175	175	A	48	0	N	0	0	M	2009	175
 8	6	Tomáš	Foral	Ing.		43	CZ	zahradní architekt	Brno	3	175	175	A	93	0	N	0	0	M	2009	175
-8	7	Registrační úřad ponechal pozici volnou	Kandidát v registraci škrtnut										N	0	0	N	0	0	M	2009	175
 8	8	Zbyněk	Holub	PhDr.	Ph.D.	52	CZ	odborný pedagog	České Budějovice	544256	175	175	A	85	0	N	0	0	M	2009	175
 8	9	Jiří	Pondělíček			44	CZ	knihkupec	Praha	1	175	175	A	23	0	N	0	0	M	2009	175
 8	10	Jessica	Horváthová	Mgr.		62	CZ	režisér	Praha	1	175	175	A	49	0	N	0	0	F	2009	175
@@ -278,17 +275,14 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 13	6	Lukáš	Opatrný	Ing.		30	CZ	stavbyvedoucí	Osek	551562	152	152	A	54	0	N	0	0	M	2009	152
 13	7	Mojmír	Skotnica	MUDr.		63	CZ	lékař	Ostrava	4	152	152	A	90	0	N	0	0	M	2009	152
 13	8	Miroslav	Knapovský	Ing.		37	CZ	IT specialista	Červený Kostelec	573965	152	152	A	55	0	N	0	0	M	2009	152
-13	9	Registrační úřad ponechal pozici volnou	Kandidát v registraci škrtnut										N	0	0	N	0	0	F (Kandidát)	2009	152
 13	10	Tomáš	Perna	Ing.		56	CZ	matematik-analytik	Ostrava	4	152	152	A	55	0	N	0	0	M	2009	152
 13	11	Taťána	Frýblová	MUDr.	CSc.	65	CZ	lékařka	Ostrava	4	99	152	A	44	0	N	0	0	F	2009	152
-13	12	Registrační úřad ponechal pozici volnou	Kandidát v registraci škrtnut										N	0	0	N	0	0	M	2009	152
 13	13	Václav	Komárek	Mgr.		65	CZ	pedagog	Ostrava	4	152	152	A	63	0	N	0	0	M	2009	152
 13	14	Lucie	Pekárková	Ing. Bc.		33	CZ	procesní analytik	Ostrava	4	99	152	A	75	0	N	0	0	F	2009	152
 13	15	Pavel	Malý	PhDr.		64	CZ	publicista	Praha	1	99	152	A	22	0	N	0	0	M	2009	152
 13	16	Patrick	Ungermann	Mgr.		35	CZ	pedagog	Hradec Králové	569810	99	152	A	50	0	N	0	0	M	2009	152
 13	17	Michal	Kubík			25	CZ	Zemský velitel Národní gardy	Mariánské Lázně	554642	152	152	A	93	0	N	0	0	M	2009	152
 13	18	Jindřich	Galda			56	CZ	starosta obce	Třemešná	597911	152	152	A	27	0	N	0	0	M	2009	152
-13	19	Registrační úřad ponechal pozici volnou	Kandidát v registraci škrtnut										N	0	0	N	0	0	F	2009	152
 13	20	Ladislav	Paštéka			36	CZ	ředitel rádia Vlast a public.	Chodov	553735	152	152	A	23	0	N	0	0	M	2009	152
 13	21	Marcel	Ambrož			23	CZ	student VŠ	Hluboká nad Vltavou	544485	152	152	A	17	0	N	0	0	M	2009	152
 13	22	Martina	Pištorová			24	CZ	místopředsedkyně Mládeže NS	Chlumec nad Cidlinou	570109	152	152	A	17	0	N	0	0	F	2009	152
@@ -395,7 +389,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 18	6	Eugenie	Trützschlerová	Dr.		58	CZ	VŠ docentka v SRN	Bad Berka	999996	99	138	A	28	0	N	0	0	F	2009	138
 18	7	Peter	Sládeček	Mgr.		27	SK	projektový manažer	Praha	1	99	138	A	13	0	N	0	0	M	2009	138
 18	8	Rostislav	Štork	RNDr.	Ph.D.	39	CZ	vědec	Třebíč	590266	99	138	A	59	0	N	0	0	M	2009	138
-18	9	Registrační úřad ponechal pozici volnou	Kandidát v registraci škrtnut										N	0	0	N	0	0	M	2009	138
 18	10	Jindřiška	Procházková	MUDr.		49	CZ	praktická lékařka	Horažďovice	556254	99	138	A	61	0	N	0	0	F	2009	138
 18	11	Klára	Prokešová			25	CZ	technička	Rosice	572179	99	138	A	15	0	N	0	0	F	2009	138
 18	12	Derek	Pilous	Mgr.		34	CZ	vysokoškolský učitel	Mirošovice	538485	138	138	A	27	0	N	0	0	M	2009	138
@@ -515,7 +508,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 23	22	Tomáš	Horák	Bc.		28	CZ	podnikatel	Dolní Němčí	592145	714	714	A	103	0	N	0	0	M	2009	714
 23	23	Tomáš	Marek		MBA	37	CZ	výkonný ředitel	Kly	534897	714	714	A	48	0	N	0	0	M	2009	714
 23	24	Luděk	Konopáč	Bc.		47	CZ	soukromý podnikatel oboru obch	Poděbrady	537683	714	714	A	34	0	N	0	0	M	2009	714
-23	25	Registrační úřad ponechal pozici volnou	Kandidát v registraci škrtnut										N	0	0	N	0	0	F	2009	714
 23	26	Michal	Semín	Mgr.		41	CZ	ředitel institutu sv. Josefa	Praha	1	99	714	A	209	0	N	0	0	M	2009	714
 23	27	František	Matějka			38	CZ	vedoucí kanceláře nadačního fo	Most	567027	714	714	A	197	0	N	0	0	M	2009	714
 24	1	Lukáš	Macek		M.A.	33	CZ	politolog a manažer, řed. evr.	Praha	1	99	129	A	5015	0	N	0	0	M	2009	129
@@ -727,7 +719,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 33	15	Ivan	Přikryl	JUDr.		60	CZ	advokát	Praha	1	7	7	A	716	0	N	0	8	M	2009	7
 33	16	Miloš	Balabán	PhDr.	Ph.D.	46	CZ	vědecký pracovník	Praha	1	7	7	A	1239	0	N	0	9	M	2009	7
 33	17	Karel	Štogl	Mgr.		36	CZ	poradce v oblasti fondů EU	Praha	1	7	7	A	1267	0	N	0	10	M	2009	7
-33	18	Registrační úřad ponechal pozici volnou	Kandidát v registraci škrtnut										N	0	0	N	0	0	M	2009	7
 33	19	Roman	Váňa	Ing.		42	CZ	technik	Olomouc	500496	7	7	A	3051	0	N	0	11	M	2009	7
 33	20	Aleš	Pospíšil	Mgr.		41	CZ	PA/PR konzultant	Praha	1	7	7	A	212	0	N	0	12	M	2009	7
 33	21	Lucie	Svobodová	Mgr. Ing.		27	CZ	podniková právnička	Praha	1	7	7	A	2374	0	N	0	13	F	2009	7
