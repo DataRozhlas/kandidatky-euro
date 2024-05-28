@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      width: {
+        'half-minus-gap': 'calc(50% - 0.125rem)'
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

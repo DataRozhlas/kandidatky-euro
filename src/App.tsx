@@ -1,9 +1,13 @@
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
-import { Label } from "@/components/ui/label"
+//import { Label } from "@/components/ui/label"
 import { useState, useEffect } from "react"
 import { tsvParse } from "d3"
 
 import Stat from "@/components/Stat"
+import SelectYears from "@/components/SelectYears"
+
+type View = {
+  years: string[]
+}
 
 
 const yearsAvailable = ["2004", "2009", "2014", "2019", "2024"]
@@ -22,12 +26,14 @@ const countAverageAge = (data: any[]) => {
   return (sum / total).toLocaleString("cs-CZ", { maximumFractionDigits: 1 }) + " let";
 }
 
+
 function App() {
 
-  const [view, setView] = useState({ years: ["2024"] })
+  const [view, setView] = useState<View>({ years: ["2024"] })
   const [data, setData] = useState<{ [key: string]: any }>({})
   const [filteredData, setFilteredData] = useState<any[]>([])
   const [total, setTotal] = useState(0)
+
 
   //load data if not already loaded
   useEffect(() => {
@@ -70,29 +76,15 @@ function App() {
 
   return (
     <>
-      <div className="max-w-[1070px] mx-auto flex flex-col gap-2">
-        <div className="flex flex-row items-center justify-center gap-2">
-          <Label htmlFor="select-rok">Vyberte volby</Label>
-          <ToggleGroup id={"select-rok"} type={"multiple"} variant={"outline"} value={view.years} onValueChange={(value) => {
-            if (value) { setView(prev => { return { ...prev, years: value } }) }
-          }}>
-            {yearsAvailable.map((year) => (
-              <ToggleGroupItem
-                key={year}
-                value={year}
-              >
-                {year}
-              </ToggleGroupItem>
-            ))}
-          </ToggleGroup>
-        </div>
-        <div className="flex flex-row justify-center gap-1">
+      <div className="max-w-[1070px] mx-auto flex flex-col gap-5">
+        <SelectYears view={view} setView={setView} yearsAvailable={yearsAvailable} />
+        <div className="flex flex-row flex-wrap sm:flex-nowrap justify-center gap-1">
           <Stat title="Celkem" number={total.toLocaleString("cs-CZ")} subtitle="kandidátů" icon="user" />
           {filteredData.length < total && <Stat title="Vybráno" number={(filteredData.length).toLocaleString("cs-CZ")} subtitle="kandidátů" icon="user-check" />}
-          <Stat title="Žen" number={countFemaleRatio(filteredData)} subtitle="z kandidujících" icon="female" />
-          <Stat title="Věk" number={countAverageAge(filteredData)} subtitle="průměrně" icon="clock" />
-
+          <Stat title="Podíl žen" number={countFemaleRatio(filteredData)} subtitle="z kandidujících" icon="female" />
+          <Stat title="Průměrný věk" number={countAverageAge(filteredData)} subtitle="" icon="clock" />
         </div>
+
       </div>
     </>
   )
