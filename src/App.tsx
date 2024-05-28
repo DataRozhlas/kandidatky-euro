@@ -33,6 +33,7 @@ function App() {
   const [data, setData] = useState<{ [key: string]: any }>({})
   const [filteredData, setFilteredData] = useState<any[]>([])
   const [total, setTotal] = useState(0)
+  const [cvsData, setCvsData] = useState<any[]>([])
 
 
   //load data if not already loaded
@@ -44,13 +45,40 @@ function App() {
         .then((parsed) => setData(prev => { return { ...prev, [year]: parsed } }))
     }
 
+    if (cvsData.length === 0) {
+      fetch(`./data/2024/cvs.tsv`)
+        .then((response) => response.text())
+        .then((text) => tsvParse(text))
+        .then((parsed) => setCvsData(parsed))
+    }
+
     view.years.forEach(async (year) => {
       if (data[year]) return;
       fetchData(year)
     })
-
   }, [view])
 
+  // join data with cvs
+  useEffect(() => {
+    if (cvsData.length === 0) return;
+    yearsAvailable.forEach((year) => {
+      if (data[year] && !data[year][0].NAVRHUJICI) {
+        setData(prev => {
+          return {
+            ...prev,
+            [year]: data[year].map((d: any) => {
+              const partyN = cvsData.find((c: any) => c.VSTRANA === d.NSTRANA)
+              const partyV = cvsData.find((c: any) => c.VSTRANA === d.VSTRANA)
+              const partyP = cvsData.find((c: any) => c.VSTRANA === d.PSTRANA)
+              return { ...d, NAVRHUJICI: partyN, VOLEBNI: partyV, PRISLUSNOST: partyP }
+            })
+          }
+
+        })
+        console.log("joined", year)
+      }
+    })
+  }, [data, cvsData])
 
   //calculate total
   useEffect(() => {
