@@ -4,6 +4,8 @@ import { tsvParse } from "d3"
 
 import Stat from "@/components/Stat"
 import SelectYears from "@/components/SelectYears"
+import { DataTable } from "@/components/DataTable"
+import { columns } from "./components/columns"
 
 type View = {
   years: string[]
@@ -26,13 +28,18 @@ const countAverageAge = (data: any[]) => {
   return (sum / total).toLocaleString("cs-CZ", { maximumFractionDigits: 1 }) + " let";
 }
 
+const countUnique = (data: any[], key: string) => {
+  if (data.length === 0) return "--";
+  const unique = new Set(data.map((d) => d[key])).size
+  return unique.toLocaleString("cs-CZ")
+}
 
 function App() {
 
   const [view, setView] = useState<View>({ years: ["2024"] })
   const [data, setData] = useState<{ [key: string]: any }>({})
-  const [filteredData, setFilteredData] = useState<any[]>([])
-  const [total, setTotal] = useState(0)
+  const [selected, setSelected] = useState<any[]>([])
+  const [filtered, setFiltered] = useState<any[]>([])
   const [cvsData, setCvsData] = useState<any[]>([])
 
 
@@ -45,18 +52,29 @@ function App() {
         .then((parsed) => setData(prev => { return { ...prev, [year]: parsed } }))
     }
 
-    if (cvsData.length === 0) {
-      fetch(`./data/2024/cvs.tsv`)
-        .then((response) => response.text())
-        .then((text) => tsvParse(text))
-        .then((parsed) => setCvsData(parsed))
+    // Check if data for all years in view.years has already been fetched
+    const allDataFetched = view.years.every(year => data[year]);
+
+    if (allDataFetched) {
+      // If data for all years has been fetched, return early to prevent fetching again
+      return;
     }
 
     view.years.forEach(async (year) => {
       if (data[year]) return;
       fetchData(year)
+      console.log("fetched", year)
     })
-  }, [view])
+
+    if (cvsData.length === 0) {
+      fetch(`./data/2024/cvs.tsv`)
+        .then((response) => response.text())
+        .then((text) => tsvParse(text))
+        .then((parsed) => setCvsData(parsed))
+      console.log("fetched cvs")
+    }
+
+  }, [view.years])
 
   // join data with cvs
   useEffect(() => {
@@ -80,40 +98,37 @@ function App() {
     })
   }, [data, cvsData])
 
-  //calculate total
+  // select data by year
   useEffect(() => {
-    let total = 0
+    let selected: any[] = []
     view.years.forEach((year) => {
       if (data[year]) {
-        total += data[year].length
+        selected = selected.concat(data[year])
       }
     })
-    setTotal(total)
-  }, [data, view])
+    setSelected(selected)
+  }, [data, view.years])
 
-  // filter data
+  // filter data with greater granularity
   useEffect(() => {
-    let filtered: any[] = []
-    view.years.forEach((year) => {
-      if (data[year]) {
-        filtered = filtered.concat(data[year])
-      }
-    })
-    setFilteredData(filtered)
-  }, [data, view])
+    setFiltered(selected)
+  }, [selected, view])
+
 
   return (
     <>
-      <div className="max-w-[1070px] mx-auto flex flex-col gap-5">
-        <SelectYears view={view} setView={setView} yearsAvailable={yearsAvailable} />
-        <div className="flex flex-row flex-wrap sm:flex-nowrap justify-center gap-1">
-          <Stat title="Celkem" number={total.toLocaleString("cs-CZ")} subtitle="kandidátů" icon="user" />
-          {filteredData.length < total && <Stat title="Vybráno" number={(filteredData.length).toLocaleString("cs-CZ")} subtitle="kandidátů" icon="user-check" />}
-          <Stat title="Podíl žen" number={countFemaleRatio(filteredData)} subtitle="z kandidujících" icon="female" />
-          <Stat title="Průměrný věk" number={countAverageAge(filteredData)} subtitle="" icon="clock" />
+      {<div className="max-w-[1070px] mx-auto flex flex-col gap-5">
+        <SelectYears years={view.years} setView={setView} yearsAvailable={yearsAvailable} />
+        <div className="flex flex-row flex-wrap lg:flex-nowrap justify-center gap-1">
+          <Stat title="Celkem" number={selected.length.toLocaleString("cs-CZ")} subtitle="kandidujících" icon="user" />
+          <Stat title="Vybráno" number={(filtered.length).toLocaleString("cs-CZ")} subtitle="kandidujících" icon="user-check" />
+          <Stat title="Podíl žen" number={countFemaleRatio(filtered)} subtitle="z vybraných" icon="female" />
+          <Stat title="Průměrný věk" number={countAverageAge(filtered)} subtitle="u vybraných" icon="clock" />
+          <Stat title="Počet stran" number={countUnique(filtered, "VSTRANA")} subtitle="včetně koalic" icon="vote" />
         </div>
+        <DataTable columns={columns} data={filtered} />
 
-      </div>
+      </div>}
     </>
   )
 }

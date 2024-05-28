@@ -1,4 +1,7 @@
 import { csvParse, tsvFormat } from 'd3';
+import { dsvFormat } from 'd3-dsv'
+const parser = dsvFormat(";")
+
 
 
 const years = ["2004", "2009", "2014", "2019", "2024"];
@@ -8,7 +11,7 @@ for (const year of years) {
     const data = csvParse(file);
 
     const EPRKLfile = await Bun.file(`./srv/data/${year}/eprkl.csv`).text();
-    const EPRKLdata = csvParse(EPRKLfile);
+    const EPRKLdata = year === "2019" ? parser.parse(EPRKLfile) : csvParse(EPRKLfile);
 
     const newData = data.map((d: any) => {
         const foundItem = EPRKLdata.find(item => item.ESTRANA === d.ESTRANA);
