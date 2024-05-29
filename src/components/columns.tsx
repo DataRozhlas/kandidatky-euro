@@ -30,6 +30,24 @@ export const columns: ColumnDef<Candidate>[] = [
         header: "Rok",
     },
     {
+        accessorKey: "PORCISLO",
+        header: ({ column }) => {
+            return (
+                <Button
+                    variant="ghost"
+                    onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+                >
+                    #
+                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                </Button>
+            )
+        },
+        cell: ({ row }: { row: any }) => {
+            return (<div className="text-center">{row.getValue("PORCISLO")}</div>)
+        },
+
+    },
+    {
         accessorKey: "JMENO",
         header: "Jméno",
     },
@@ -93,15 +111,68 @@ export const columns: ColumnDef<Candidate>[] = [
         header: "Povolání",
     },
     {
+        accessorKey: "BYDLISTEN",
+        header: "Bydliště",
+    },
+    {
         accessorKey: "VOLEBNI.ZKRATKAV30",
         header: "Volební strana",
     },
+
     {
         accessorKey: "NAVRHUJICI.ZKRATKAV30",
         header: "Navrhující strana",
     },
     {
-        accessorKey: "HLASY",
-        header: "Hlasy",
-    }
+        accessorKey: "POCHLASU",
+        header: ({ column }) => {
+            return (
+                <Button
+                    variant="ghost"
+                    onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+                >
+                    Preferenční hlasy
+                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                </Button>
+            )
+        },
+        cell: ({ row }: { row: any }) => {
+            return (<div className="text-center">{isNaN(Number(row.getValue("POCHLASU"))) ? "0" : Number(row.getValue("POCHLASU")).toLocaleString("cs-CZ")}</div>)
+        },
+
+    },
+    {
+        accessorKey: "POCPROC",
+        header: ({ column }) => {
+            return (
+                <Button
+                    variant="ghost"
+                    onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+                >
+                    Preferenční hlasy
+                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                </Button>
+            )
+        },
+        cell: ({ row }: { row: any }) => {
+            return (<div className="text-center">{isNaN(Number(row.getValue("POCPROC"))) ? "0" : Number(row.getValue("POCPROC")).toLocaleString("cs-CZ")} %</div>)
+        },
+
+    },
+    {
+        accessorKey: "STATOBCAN",
+        header: ({ column }) => {
+            return (
+                <Button
+                    variant="ghost"
+                    onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+                >
+                    Občanství
+                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                </Button>
+            )
+        },
+
+    },
+
 ]

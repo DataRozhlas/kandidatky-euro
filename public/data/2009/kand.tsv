@@ -57,7 +57,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 2	27	Stanislav	Kamba	Ing.		52	CZ	řed. jednatel spol. starosta	Vísky	579289	1	1	A	284	0	N	0	25	M	2009	1
 2	28	František	Havíř			52	CZ	starosta města	Rousínov	593559	1	1	A	214	0	N	0	26	M	2009	1
 2	29	Marie	Heřmánková			41	CZ	asistentka	Praha	1	99	1	A	134	0	N	0	27	F	2009	1
-3	1	Jana	Zachová			40	CZ	manažerka projektu	Průhonice	539571	144	144	N	0	0	N	0	0	F	2009	144
 3	2	Kateřina	Klasnová			31	CZ	šéfredaktorka	Praha	1	144	144	A	7033	0	N	0	0	F	2009	144
 3	3	Libor	Forman			43	CZ	podnikatel	Jihlava	586846	144	144	A	1137	0	N	0	0	M	2009	144
 3	4	Lenka	Andrýsová			24	CZ	konzultant	Černotín	513067	99	144	A	1846	0	N	0	0	F	2009	144
@@ -328,7 +327,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 15	11	Jana	Šimonová	Ing.		29	CZ	finanční kozultantka	Křemže	545571	100	100	A	34	0	N	0	0	F	2009	100
 15	12	Martin	Mevald			31	CZ	programátor	Beroun	531057	100	100	A	20	0	N	0	0	M	2009	100
 15	13	Jana	Pešková	Mgr.		61	CZ	učitelka, výtvarnice	Český Krumlov	545392	99	100	A	48	0	N	0	0	F	2009	100
-15	14	Michaela	Švarcová			22	CZ	studentka politologie a sociol	Praha	1	100	100	N	0	0	N	0	0	F	2009	100
 15	15	Jan	Pelan			41	CZ	živnostník	Brno	3	99	100	A	5	0	N	0	0	M	2009	100
 15	16	Ilona	Musilová	Bc.		44	CZ	PR manager	Brno	3	99	100	A	21	0	N	0	0	F	2009	100
 15	17	Petra	Šindelářová			29	CZ	koordinátorka neziskové org.	Praha	1	100	100	A	41	0	N	0	0	F	2009	100
@@ -338,7 +336,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 15	21	Zuzana	Hájková	Mgr.		26	CZ	analytička	Služovice	510297	100	100	A	15	0	N	0	0	F	2009	100
 15	22	Petr	Švec			31	CZ	konstruktér	Praha	1	100	100	A	7	0	N	0	0	M	2009	100
 15	23	Klára	Horálková			21	CZ	studentka medicíny	Vlašim	530883	100	100	A	49	0	N	0	0	F	2009	100
-15	24	Jan	Pospíšil			22	CZ	student mezinárodních vztahů	Radovesnice I	533637	100	100	N	0	0	N	0	0	M	2009	100
 15	25	Jiří	Jareš			27	CZ	podnikatel	Dolní Novosedly	562301	100	100	A	15	0	N	0	0	M	2009	100
 15	26	Eva	Krumbholcová			51	CZ	operátorka	Roztoky	539627	100	100	A	5	0	N	0	0	F	2009	100
 15	27	Michal	Bartoň			21	CZ	student mechatroniky	Mladá Boleslav	535419	99	100	A	12	0	N	0	0	M	2009	100
@@ -363,26 +360,7 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 16	18	Aleš	Sekanina			45	CZ	elektrotechnik	Bučovice	592943	83	83	A	54	0	N	0	0	M	2009	83
 16	19	Tomáš	Skoumal	Mgr.		36	CZ	učitel	Bludov	530964	83	83	A	32	0	N	0	0	M	2009	83
 16	20	Jaroslav	Gál			32	CZ	technik	Zlín	585068	83	83	A	49	0	N	0	0	M	2009	83
-17	1	Jakub	Zvoníček			26	CZ	investiční poradce	Brno	3	143	143	N	0	0	N	0	0	M	2009	143
-17	2	Michaela	Výtisková			24	CZ	projektová manažerka	Praha	1	99	143	N	0	0	N	0	0	F	2009	143
-17	3	Doubravka	Sobková			24	CZ	projektová manažerka	Praha	1	99	143	N	0	0	N	0	0	F	2009	143
-17	4	Jan	Stibor	Ing.		27	CZ	technický konzultant	Praha	1	99	143	N	0	0	N	0	0	M	2009	143
-17	5	Miroslav	Richter			25	CZ	podnikatel	Ústí nad Labem	554804	99	143	N	0	0	N	0	0	M	2009	143
-17	6	Martin	Řehák			24	CZ	finanční manažer	České Budějovice	544256	99	143	N	0	0	N	0	0	M	2009	143
-17	7	Lukáš	Kačmařík			24	CZ	vedoucí poradenské kanceláře	Praha	1	99	143	N	0	0	N	0	0	M	2009	143
-17	8	Martin	Muzikář			38	CZ	podnikatel	Odolena Voda	538574	168	143	N	0	0	N	0	0	M	2009	143
-17	9	Michal	Vítů			35	CZ	správce bytových domů	Odolena Voda	538574	99	143	N	0	0	N	0	0	M	2009	143
-17	10	Ondřej	Rejzek			29	CZ	organizační manažer	Praha	1	99	143	N	0	0	N	0	0	M	2009	143
-17	11	Jakub Filip	Novák			29	CZ	architekt	Praha	1	99	143	N	0	0	N	0	0	M	2009	143
-17	12	Jan	Kopecký			28	CZ	specialista PR a marketingu	Kácov	534129	99	143	N	0	0	N	0	0	M	2009	143
-17	13	Magdalena	Chlupáčová			26	CZ	projektová manažerka	Býčkovice	546780	99	143	N	0	0	N	0	0	F	2009	143
-17	14	Lucie	Krejčová			29	CZ	předsedkyně představenstva akc	Praha	1	99	143	N	0	0	N	0	0	F	2009	143
-17	15	Ilona	Drlíková			55	CZ	úřednice	Praha	1	99	143	N	0	0	N	0	0	F	2009	143
-17	16	Jiří	Štěpánek			55	CZ	úředník	Praha	1	99	143	N	0	0	N	0	0	M	2009	143
-17	17	Milada	Ševčíková			56	CZ	úřednice	Praha	1	99	143	N	0	0	N	0	0	F	2009	143
-17	18	Eva	Štěpánková			48	CZ	úřednice	Praha	1	99	143	N	0	0	N	0	0	F	2009	143
 18	1	Milan	Hamerský	Mgr.		36	CZ	ředitel neziskové organizace	Brno	3	138	138	A	132	0	N	0	0	M	2009	138
-18	2	Martina	Nováková	Mgr.		30	CZ	právnička, specialistka na evr	Brno	3	99	138	N	0	0	N	0	0	F	2009	138
 18	3	Linh	Nguyen			22	CZ	student mezinárodních vztahů	Praha	1	99	138	A	113	0	N	0	0	F	2009	138
 18	4	Róbert	Furiel			23	SK	student	Praha	1	99	138	A	16	0	N	0	0	M	2009	138
 18	5	Pavel	Černý			24	CZ	výrobní manažer	Trutnov	579025	99	138	A	38	0	N	0	0	M	2009	138
@@ -487,7 +465,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 23	1	Jiří	Payne	RNDr.		52	CZ	poradce prezidenta republiky	Praha	1	714	714	A	3437	0	N	0	0	M	2009	714
 23	2	Benjamin Miloslav	Kuras			65	CZ	spisovatel	Praha	1	714	714	A	3341	0	N	0	0	M	2009	714
 23	3	Miloslav	Bednář	Prof. PhDr.		60	CZ	vědecký pracovník a  VŠ učitel	Praha	1	714	714	A	1059	0	N	0	0	M	2009	714
-23	4	David	Hanák	Mgr.		37	CZ	obchodní manažer	Brno	3	714	714	N	0	0	N	0	0	M	2009	714
 23	5	Alena	Šedivá			54	CZ	manažerka v oblasti kultury	Vestec	537942	714	714	A	275	0	N	0	0	F	2009	714
 23	6	Martin	Muzikář	Mgr.	Ph.D.	35	CZ	specialista farmaceutické dok.	Praha	1	714	714	A	236	0	N	0	0	M	2009	714
 23	7	Jan	Kasal	Bc.		24	CZ	student vysoké školy	Přerov	511382	714	714	A	326	0	N	0	0	M	2009	714

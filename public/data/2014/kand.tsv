@@ -32,7 +32,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 2	3	Marie	Kindermannová	PaedDr.		65	CZ	učitelka	Chomutov	562971	197	197	A	102	0	N	0	0	F	2014	576
 2	4	Roman	Jelínek	MUDr.		58	CZ	lékař	Kopřivnice	599565	99	159	A	116	0	N	0	0	M	2014	576
 2	5	Lenka	Štěpánková			53	CZ	vrchní sestra	Klášterec nad Ohří	563129	99	197	A	168	0	N	0	0	F	2014	576
-2	6	Jiří	Hadrava	Ing.		61	CZ	stavební inženýr	Buštěhrad	532169	99	159	N	0	0	N	0	0	M	2014	576
 2	7	Aleš	Eliáš	Ing.		62	CZ	informatik	Kozlovice	540200	99	159	A	40	0	N	0	0	M	2014	576
 2	8	Petr	Kindermann			42	CZ	živnostník	Chomutov	562971	197	197	A	75	0	N	0	0	M	2014	576
 2	9	Zdeněk	Joukl			73	CZ	sociální ekolog	Desná	563552	99	159	A	31	0	N	0	0	M	2014	576
@@ -363,7 +362,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 16	23	Radek	Hloušek			36	CZ	obchodní manažer	Suchdol nad Lužnicí	547280	768	768	A	384	0	N	0	19	M	2014	768
 16	24	Jaroslav	Špaček	Ing.		49	CZ	pilot vrtulníku záchr. služby	Čehovice	589365	768	768	A	3778	0	N	0	20	M	2014	768
 16	25	Martin	Mata	Bc.		31	CZ	vedoucí logistiky	Ústí nad Labem	5	768	768	A	273	0	N	0	21	M	2014	768
-16	26	Milan	Zavada			23	CZ	student - záchranář	Praha	1	99	768	N	0	0	N	0	0	M	2014	768
 16	27	Erik	Mikuš	Ing.		39	CZ	projektový manažer	Modřice	583391	768	768	A	524	0	N	0	22	M	2014	768
 16	28	Antonín	Skoumal	Ing.		66	CZ	diplomat	Brno	3	99	768	A	491	0	N	0	23	M	2014	768
 17	1	Štefan	Tišer			64	CZ	důchodce	Třemošná	559521	767	767	A	29	0	N	0	0	M	2014	767
@@ -456,9 +454,7 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 20	26	Darina	Kovačíková	Mgr.		33	CZ	právnička	Fulnek	599352	53	53	A	176	0	N	0	24	F	2014	53
 20	27	Aneta	Martišková	Bc.		29	CZ	právní konzultantka	Vsetín	541630	53	53	A	158	0	N	0	25	F	2014	53
 20	28	Jan	Nedvídek			21	CZ	student	Praha	1	9991	53	A	270	0	N	0	26	M	2014	53
-21	1	Kristina	Soukupová		B.A.,M.A.,Ph.D.	35	CZ	majitelka a ředitelka spol.	Praha	1	99	769	N	0	0	N	0	0	F	2014	769
 21	2	Aleš	Hemer	Mgr.		47	CZ	ek.poradce,konzultant,předseda	Praha	1	769	769	A	171	0	N	0	0	M	2014	769
-21	3	Marek	Merhaut	PhDr.	Ph.D., MBA	48	CZ	VŠ pedagog, mpř. strany	Praha	1	769	769	N	0	0	N	0	0	M	2014	769
 21	4	Martin	Zounar			46	CZ	herec a moderátor	Praha	1	99	769	A	495	0	N	0	0	M	2014	769
 21	5	Vladimír	Šmicer			41	CZ	fotb. internacionál, vítěz LM	Praha	1	99	769	A	680	0	N	0	0	M	2014	769
 21	6	Jiří	Mikl	Mgr.		46	CZ	projekt. manažer,mpř.strany	Praha	1	769	769	A	21	0	N	0	0	M	2014	769
@@ -483,7 +479,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 21	25	Jakub	Zeman			21	CZ	manažer logistiky a obch.zást.	Chomutov	562971	769	769	A	5	0	N	0	0	M	2014	769
 21	26	Šárka	Ciencialová			30	CZ	proj.manažerka a inst.fitness	Káraný	564974	769	769	A	6	0	N	0	0	F	2014	769
 21	27	Jan	Horák	Ing.		24	CZ	dobrodruh	Olomouc	500496	99	769	A	45	0	N	0	0	M	2014	769
-22	1	Klára	Samková	JUDr.	Ph.D.	51	CZ	advokátka	Praha	1	99	792	N	0	0	N	0	0	F	2014	792
 22	2	Roman	Škrabánek	Ing.		47	CZ	ekonom, prezident AČCKA	Kolín	533165	99	792	A	4917	0	N	0	0	M	2014	792
 22	3	Kateřina	Radostová	JUDr. Mgr.		36	CZ	advokátka, předs.Odv.kom. FAČR	Praha	1	99	792	A	4308	0	N	0	0	F	2014	792
 22	4	Jiří	Luska	prof. PaedDr.	CSc.	62	CZ	vysokoškolský profesor	Prostějov	589250	99	792	A	1422	0	N	0	0	M	2014	792
@@ -774,18 +769,15 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 35	5	Vladimír	Stehlík	Doc. Akad. arch.		70	CZ	býv.gen.ředitel Poldi Kladno	Praha	1	99	132	A	63	0	N	0	0	M	2014	132
 35	6	Jiří	Bezák			54	CZ	energetik	Choceň	580350	99	132	A	36	0	N	0	0	M	2014	132
 35	7	Pavel	Suchomel			53	CZ	podnikatel, občanský aktivista	Brno	3	99	132	A	6	0	N	0	0	M	2014	132
-35	8	Eva	Hůlková			60	CZ	občanská aktivistka	Praha	1	132	132	N	0	0	N	0	0	F	2014	132
 35	9	Štefan	Alakša	Bc.		29	CZ	analytik v IT	Praha	1	99	132	A	28	0	N	0	0	M	2014	132
 35	10	Jindřich	Lajner			34	CZ	výškové práce	Lysá nad Labem	537454	99	132	A	15	0	N	0	0	M	2014	132
 35	11	Milan	Tejchman	MUDr.		49	CZ	lékař	Trutnov	579025	99	132	A	32	0	N	0	0	M	2014	132
-35	12	Jaroslav	Končák			65	CZ	důchodce a občanský aktivista	Prostějov	589250	99	132	N	0	0	N	0	0	M	2014	132
 35	13	Vladimír	Prokeš			46	CZ	občanský aktivista	Jihlava	586846	99	132	A	16	0	N	0	0	M	2014	132
 35	14	Miloslav	Jandík			71	CZ	důchodce, reportér, farmář	Nemyčeves	573230	132	132	A	14	0	N	0	0	M	2014	132
 35	15	Pavel	Volf			25	CZ	administrativní pracovník	Jičín	572659	99	132	A	52	0	N	0	0	M	2014	132
 35	16	Mário Alessandro	de Bikavér	Mgr.		50	CZ	spisovatel, básník, filosof	Praha	1	99	132	A	42	0	N	0	0	M	2014	132
 35	17	Josef	Olšina			54	CZ	zedník, člen exek.domobrany	Věžky	552755	99	132	A	23	0	N	0	0	M	2014	132
 35	18	Lenka	Lekešová			39	CZ	dělnice	Tečovice	549649	99	132	A	3	0	N	0	0	F	2014	132
-35	19	Martin	Menčík			45	CZ	reportér, číšník	Ústí nad Labem	5	132	132	N	0	0	N	0	0	M	2014	132
 35	20	Martin	Liška			37	CZ	předseda Ochránců občan. práv	Starý Plzenec	558371	99	132	A	4	0	N	0	0	M	2014	132
 36	1	Michal	Klusáček	Ing.		34	CZ	předseda ČSNS, letecký inženýr	Praha	1	2	2	A	60	0	N	0	0	M	2014	2
 36	2	Václav	Mlejnský			40	CZ	velitel jednotky dráž. hasičů	Újezd	531901	99	2	A	30	0	N	0	0	M	2014	2

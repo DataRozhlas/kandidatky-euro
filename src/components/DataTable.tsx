@@ -24,9 +24,9 @@ import {
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
+  // PaginationEllipsis,
   PaginationItem,
-  PaginationLink,
+  // PaginationLink,
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination"
@@ -35,13 +35,22 @@ import {
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
+  years: string[]
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
+  years,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([])
+  const [columnVisibility, setColumnVisibility] = React.useState({
+    JMENO: false,
+    TITULPRED: false,
+    TITULZA: false,
+    POHLAVI: false,
+    ROK: years.length > 1,
+  })
   const table = useReactTable({
     data,
     columns,
@@ -51,19 +60,28 @@ export function DataTable<TData, TValue>({
     getSortedRowModel: getSortedRowModel(),
     state: {
       sorting,
+      columnVisibility,
     },
     initialState: {
       pagination: {
         pageSize: 20, //custom default page size
       },
-      columnVisibility: {
-        JMENO: false,
-        TITULPRED: false,
-        TITULZA: false,
-        POHLAVI: false,
-      },
     },
+
   })
+
+  React.useEffect(() => {
+    if (years.length > 1) {
+      setColumnVisibility((prev) => {
+        return { ...prev, ROK: true }
+      })
+    }
+    if (years.length < 2) {
+      setColumnVisibility((prev) => {
+        return { ...prev, ROK: false }
+      })
+    }
+  }, [years])
 
   return (
     <div>

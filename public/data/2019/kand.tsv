@@ -272,12 +272,10 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 12	28	Silvia	Weiszová			51	CZ	OSVČ, místopředsedkyně strany	Praha	1	137	137	A	124	.66	N	0	0	F	2019	1438
 13	1	Petr	Cibulka			68	CZ	pětinásobný politický vězeň, vydavatel seznamů StB	Praha	1	98	98	A	1122	23.61	N	0	0	M	2019	98
 13	2	Jan	Bečka			41	CZ	koordinátor	Ohrazenice	540960	99	98	A	172	3.61	N	0	0	M	2019	98
-13	3	Mirko	Horáček			61	CZ	podnikatel a obchodní manažer	Praha	1	99	98	N	0	0	N	0	0	M	2019	98
 13	4	Milan	Mikeš	Mgr. Bc.		48	CZ	počítačový specialista	Římov	545007	99	98	A	113	2.37	N	0	0	M	2019	98
 13	5	Milan	Kočík			63	CZ	volný novinář, léčitel a Český ombudsman	Žďár nad Sázavou	595209	99	98	A	129	2.71	N	0	0	M	2019	98
 13	6	Miroslav	Václavek			53	CZ	manažer, spisovatel, básník, politický analytik	Šumperk	523704	99	98	A	67	1.4	N	0	0	M	2019	98
 13	7	Lubomír	Tichý	Ing.		71	CZ	angažovaný občan	Jaroměřice	578151	99	98	A	24	.5	N	0	0	M	2019	98
-13	8	Petr	Přistoupil			36	CZ	zřizovatel a jednatel spolku	Ústí nad Labem	5	99	98	N	0	0	N	0	0	M	2019	98
 13	9	Miroslav	Durdil			70	CZ	volný novinář	Praha	1	99	98	A	20	.42	N	0	0	M	2019	98
 13	10	František	Kazilovský			62	CZ	údržbář	Lázně Bohdaneč	574767	99	98	A	48	1.01	N	0	0	M	2019	98
 13	11	Bronislava	Zigová			59	CZ	asistentka Českého ombudsmana	Nové Město na Moravě	596230	99	98	A	97	2.04	N	0	0	F	2019	98
@@ -298,7 +296,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 14	10	Jan	Prokeš			29	CZ	soukromý podnikatel, komunální politik	Žumberk	572641	99	1209	A	17	.76	N	0	0	M	2019	1209
 14	11	Jiří	Voslář			46	CZ	technický pracovník v ostraze budov a osob	Praha	1	99	1209	A	6	.27	N	0	0	M	2019	1209
 14	12	Pavel	Křivka	Ing.		58	CZ	botanický zahradník, překladatel a nakladatel	Pardubice	6	99	1209	A	25	1.12	N	0	0	M	2019	1209
-14	13	Lucie	Nejedlová			33	CZ	floristka, majitel. a provoz. studia 	"telier 26"""""	Třebotov	539759	99	1209	A	19	.85	N	0	F	2019	1209
 14	14	Tomáš	Foral	Ing.		53	CZ	podnikatel v oblasti zahradnictví a sadařství	Brno	3	99	1209	A	44	1.98	N	0	0	M	2019	1209
 14	15	Petr	Gotthard	Ing.		41	CZ	IT technik a systémový specialista	Brno	3	99	1209	A	27	1.21	N	0	0	M	2019	1209
 14	16	Vladislav	Auda			47	CZ	soukr. podnik. v oblasti mediál. služby a propag.	Slavkov u Brna	593583	99	1209	A	5	.22	N	0	0	M	2019	1209
@@ -314,7 +311,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 15	7	Monika	Vlasáková			28	CZ	číšnice	Sezemice	599573	1222	1222	A	42	1.52	N	0	0	F	2019	1222
 15	8	Eliška	Wojnarovska			29	CZ	cukrářka	Sezemice	599573	1222	1222	A	62	2.24	N	0	0	F	2019	1222
 15	9	Tomáš	Vlasák			25	CZ	poštovní doručovatel	Holice	574988	1222	1222	A	45	1.63	N	0	0	M	2019	1222
-15	10	Adéla	Konvalinová			35	CZ	na mateřské 	"ovolené"""""	Holice	574988	1222	1222	A	50	1.81	N	0	F	2019	1222
 15	11	Lukáš	Doubek			35	CZ	specialista kvality v automobilce	Starý Kolín	533700	1222	1222	A	55	1.99	N	0	0	M	2019	1222
 15	12	Vladimír	Vepřek			37	CZ	policista	Pardubice	6	99	1222	A	109	3.94	N	0	0	M	2019	1222
 16	1	Ivan	Holoubek	prof. RNDr.	CSc.	68	CZ	profesor chemie životního prostředí PřF MU	Brno	3	1200	1200	A	1136	5.82	N	0	0	M	2019	1200
@@ -366,7 +362,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 17	27	Josef	Štěpánek			56	CZ	OSVČ	Děčín	562335	99	2	A	2	.15	N	0	0	M	2019	1439
 17	28	Petr	Pospěch	Ing.		52	CZ	trenér softbalového klubu	Praha	1	99	1004	A	8	.62	N	0	0	M	2019	1439
 18	1	Petr	Kováč			46	CZ	podnikatel	Brno	3	1223	1223	A	88	10.52	N	0	0	M	2019	1223
-18	2	Oldřich	Duchoň			56	CZ	podnikatel	Brno	3	99	1223	N	0	0	N	0	0	M	2019	1223
 18	3	Lukáš	Dvořák			24	CZ	řidič	Brno	3	1223	1223	A	64	7.65	N	0	0	M	2019	1223
 19	1	Václav	Kubata	Ing.		57	CZ	býv. předs. Stálé delegace PČR do PS Rady Evropy	Praha	1	99	785	A	211	2.68	N	0	0	M	2019	785
 19	2	Eva	Syková	prof. MUDr.	DrSc.	74	CZ	vědkyně, lékařka, senátorka v období 2012 - 2018	Praha	1	99	785	A	246	3.12	N	0	0	F	2019	785

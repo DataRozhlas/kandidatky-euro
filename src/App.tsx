@@ -124,9 +124,9 @@ function App() {
           <Stat title="Vybráno" number={(filtered.length).toLocaleString("cs-CZ")} subtitle="kandidujících" icon="user-check" />
           <Stat title="Podíl žen" number={countFemaleRatio(filtered)} subtitle="z vybraných" icon="female" />
           <Stat title="Průměrný věk" number={countAverageAge(filtered)} subtitle="u vybraných" icon="clock" />
-          <Stat title="Počet stran" number={countUnique(filtered, "VSTRANA")} subtitle="včetně koalic" icon="vote" />
+          <Stat title="Volebních stran" number={countUnique(filtered, "VSTRANA")} subtitle="včetně koalic" icon="vote" />
         </div>
-        <DataTable columns={columns} data={filtered} />
+        <DataTable columns={columns} data={filtered} years={view.years} />
 
       </div>}
     </>

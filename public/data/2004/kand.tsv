@@ -291,7 +291,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 10	17	Jan	Burian			30	CZ	asistent na Vysoké škole	Praha	1	99	100	A	30	0	N	0	0	M	2004	100
 10	18	Václav	Havlík	Ing.		26	CZ	layout designer	Benešov	529303	100	100	A	44	0	N	0	0	M	2004	100
 10	19	Dagmar	Bystřická	Mgr.		27	CZ	biolog - cytolog	Frýdlant	564028	100	100	A	55	0	N	0	0	F	2004	100
-10	20	Eva	Sokolová			37	CZ	podnikatelka	Praha	1	100	100	N	0	0	N	0	0	F	2004	100
 10	21	Eva	Fialová			22	CZ	studentka	Rudolfov	544981	99	100	A	37	0	N	0	0	F	2004	100
 10	22	Jana	Kalátová			22	CZ	studentka	Praha	1	100	100	A	21	0	N	0	0	F	2004	100
 10	23	Veronika	Matúšová			22	CZ	studentka	Zlín	585068	99	100	A	43	0	N	0	0	F	2004	100
@@ -301,7 +300,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 10	27	Markéta	Jůnová			24	CZ	studentka	Praha	1	100	100	A	7	0	N	0	0	F	2004	100
 10	28	Ivana	Hladká			23	CZ	studentka	Jihlava	586846	100	100	A	17	0	N	0	0	F	2004	100
 10	29	Petr	Chocholatý			23	CZ	student	Praha	1	100	100	A	12	0	N	0	0	M	2004	100
-10	30	Sylva	Táborská			24	CZ	studentka	Praha	1	99	100	N	0	0	N	0	0	F	2004	100
 10	31	Dominika	Fiřtíková			22	CZ	asistentka realitní kanceláře	Praha	1	100	100	A	17	0	N	0	0	F	2004	100
 10	32	Sofia	Komrsková			22	CZ	studentka	Praha	1	100	100	A	32	0	N	0	0	F	2004	100
 11	1	Alena	Hromádková	Ing.		61	CZ	vysokoškolský učitel	Praha	1	99	24	A	1974	0	N	0	0	F	2004	24
@@ -535,7 +533,6 @@ ESTRANA	PORCISLO	JMENO	PRIJMENI	TITULPRED	TITULZA	VEK	STATOBCAN	POVOLANI	BYDLIST
 21	18	Milan	Rejthar			58	CZ	živnostník	Písečná	580775	98	98	A	48	0	N	0	0	M	2004	98
 21	19	Jan	Hraba	Ing.		62	CZ	spec. na sděl. a inf. technol.	Prostějov	589250	98	98	A	26	0	N	0	0	M	2004	98
 21	20	Jindřich	Myslivec			54	CZ	zaměstnanec	Havlíčkův Brod	568414	98	98	A	24	0	N	0	0	M	2004	98
-21	21	Bohuslav	Odvářka			51	CZ	živnostník	Humpolec	547999	98	98	N	0	0	N	0	0	M	2004	98
 21	22	Edita	Matysková			32	CZ	technik	Trutnov	579025	98	98	A	69	0	N	0	0	F	2004	98
 21	23	Josef	Kosina			47	CZ	živnostník	Mladé Buky	579548	98	98	A	16	0	N	0	0	M	2004	98
 21	24	Milan Miki	Pešula			44	CZ	živnostník	Kladno	532053	98	98	A	24	0	N	0	0	M	2004	98
