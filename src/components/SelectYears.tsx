@@ -5,6 +5,7 @@ import { Circle, CircleCheck } from "lucide-react"
 
 type View = {
     years: string[];
+    poradi: [number, number];
 };
 
 export default function SelectYears({ years, setView, yearsAvailable }: { years: string[], setView: React.Dispatch<React.SetStateAction<View>>, yearsAvailable: string[] }) {
@@ -12,7 +13,7 @@ export default function SelectYears({ years, setView, yearsAvailable }: { years:
 
     return (
         <div className="min-w-full">
-            <div className="flex items-center justify-between h-9">
+            <div className="flex items-center justify-between">
                 <Label htmlFor="select-rok">Vyberte rok</Label>
                 {years.length < yearsAvailable.length / 2 && <Button variant={"link"} size={"sm"} onClick={() => { setView((prev: any) => { return { ...prev, years: yearsAvailable } }) }}>vybrat vše</Button>}
                 {years.length > yearsAvailable.length / 2 && <Button variant={"link"} size={"sm"} onClick={() => { setView((prev: any) => { return { ...prev, years: [] } }) }}>zrušit vše</Button>}</div>

@@ -51,23 +51,24 @@ export function DataTable<TData, TValue>({
     POHLAVI: false,
     ROK: years.length > 1,
   })
+  const [pagination, setPagination] = React.useState({
+    pageIndex: 0, //initial page index
+    pageSize: 20, //default page size
+  });
+
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
+    onPaginationChange: setPagination, //update the pagination state when internal APIs mutate the pagination state
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
     state: {
       sorting,
       columnVisibility,
-    },
-    initialState: {
-      pagination: {
-        pageSize: 20, //custom default page size
-      },
-    },
-
+      pagination,
+    }
   })
 
   React.useEffect(() => {
@@ -85,6 +86,26 @@ export function DataTable<TData, TValue>({
 
   return (
     <div>
+      <Pagination className="pb-1">
+        <PaginationContent>
+          <PaginationItem>
+            <PaginationPrevious href="#" onClick={(e) => { e.preventDefault(); table.previousPage() }} className={!table.getCanPreviousPage() ? "invisible" : ""} />
+          </PaginationItem>
+          {/* <PaginationItem>
+        <PaginationLink href="#">1</PaginationLink>
+      </PaginationItem> */}
+          {/* <PaginationItem>
+        <PaginationEllipsis />
+      </PaginationItem> */}
+          <PaginationItem className="text-xs">
+            Stránka {pagination.pageIndex + 1} z {table.getPageCount()}
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationNext href="#" onClick={(e) => { e.preventDefault(); table.nextPage() }} className={!table.getCanNextPage() ? "invisible" : ""} />
+          </PaginationItem>
+        </PaginationContent>
+      </Pagination>
+
       <div className="rounded-lg border">
         <Table>
           <TableHeader>
@@ -122,29 +143,13 @@ export function DataTable<TData, TValue>({
             ) : (
               <TableRow>
                 <TableCell colSpan={columns.length} className="h-24 text-center">
-                  No results.
+                  Žádná data.
                 </TableCell>
               </TableRow>
             )}
           </TableBody>
         </Table>
       </div>
-      <Pagination>
-        <PaginationContent>
-          <PaginationItem>
-            <PaginationPrevious href="#" onClick={(e) => { e.preventDefault(); table.previousPage() }} className={!table.getCanPreviousPage() ? "invisible" : ""} />
-          </PaginationItem>
-          {/* <PaginationItem>
-            <PaginationLink href="#">1</PaginationLink>
-          </PaginationItem> */}
-          {/* <PaginationItem>
-            <PaginationEllipsis />
-          </PaginationItem> */}
-          <PaginationItem>
-            <PaginationNext href="#" onClick={(e) => { e.preventDefault(); table.nextPage() }} className={!table.getCanNextPage() ? "invisible" : ""} />
-          </PaginationItem>
-        </PaginationContent>
-      </Pagination>
     </div>
   )
 }

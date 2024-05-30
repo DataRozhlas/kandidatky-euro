@@ -4,11 +4,13 @@ import { tsvParse } from "d3"
 
 import Stat from "@/components/Stat"
 import SelectYears from "@/components/SelectYears"
+import FiltersDesktop from "@/components/FiltersDesktop"
 import { DataTable } from "@/components/DataTable"
 import { columns } from "./components/columns"
 
 type View = {
   years: string[]
+  poradi: [number, number]
 }
 
 
@@ -36,7 +38,7 @@ const countUnique = (data: any[], key: string) => {
 
 function App() {
 
-  const [view, setView] = useState<View>({ years: ["2024"] })
+  const [view, setView] = useState<View>({ years: ["2024"], poradi: [1, 28] })
   const [data, setData] = useState<{ [key: string]: any }>({})
   const [selected, setSelected] = useState<any[]>([])
   const [filtered, setFiltered] = useState<any[]>([])
@@ -111,7 +113,12 @@ function App() {
 
   // filter data with greater granularity
   useEffect(() => {
-    setFiltered(selected)
+    const updated = selected.filter((row: { PORCISLO: string }) => {
+
+      if (Number(row.PORCISLO) >= view.poradi[0] && Number(row.PORCISLO) <= view.poradi[1]) { return true }
+      return false
+    })
+    setFiltered(updated)
   }, [selected, view])
 
 
@@ -119,6 +126,7 @@ function App() {
     <>
       {<div className="max-w-[1070px] mx-auto flex flex-col gap-5">
         <SelectYears years={view.years} setView={setView} yearsAvailable={yearsAvailable} />
+        <FiltersDesktop data={selected} view={view} setView={setView} />
         <div className="flex flex-row flex-wrap lg:flex-nowrap justify-center gap-1">
           <Stat title="Celkem" number={selected.length.toLocaleString("cs-CZ")} subtitle="kandidujících" icon="user" />
           <Stat title="Vybráno" number={(filtered.length).toLocaleString("cs-CZ")} subtitle="kandidujících" icon="user-check" />
