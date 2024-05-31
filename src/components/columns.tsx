@@ -6,23 +6,7 @@ import { Button } from "@/components/ui/button"
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
-export type Candidate = {
-    ROK: string
-    JMENO: string
-    PRIJMENI: string
-    TITULPRED: string
-    TITULZA: string
-    POHLAVI: string
-    VEK: string
-    POVOLANI: string
-    VOLEBNI: {
-        ZKRATKAV30: string
-    }
-    NAVRHUJICI: {
-        ZKRATKAV30: string
-    }
-    HLASY: string
-}
+import { Candidate } from "@/types"
 
 export const columns: ColumnDef<Candidate>[] = [
     {

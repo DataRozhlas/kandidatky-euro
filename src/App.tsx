@@ -1,6 +1,6 @@
 //import { Label } from "@/components/ui/label"
 import { useState, useEffect } from "react"
-import { tsvParse } from "d3"
+import { DSVRowString, tsvParse } from "d3"
 
 import Stat from "@/components/Stat"
 import SelectYears from "@/components/SelectYears"
@@ -8,11 +8,7 @@ import FiltersDesktop from "@/components/FiltersDesktop"
 import { DataTable } from "@/components/DataTable"
 import { columns } from "./components/columns"
 
-type View = {
-  years: string[]
-  poradi: [number, number]
-}
-
+import { View, Candidate, Party } from "@/types"
 
 const yearsAvailable = ["2004", "2009", "2014", "2019", "2024"]
 
@@ -39,10 +35,10 @@ const countUnique = (data: any[], key: string) => {
 function App() {
 
   const [view, setView] = useState<View>({ years: ["2024"], poradi: [1, 28] })
-  const [data, setData] = useState<{ [key: string]: any }>({})
-  const [selected, setSelected] = useState<any[]>([])
-  const [filtered, setFiltered] = useState<any[]>([])
-  const [cvsData, setCvsData] = useState<any[]>([])
+  const [data, setData] = useState<{ [key: string]: Candidate[] }>({})
+  const [selected, setSelected] = useState<Candidate[]>([])
+  const [filtered, setFiltered] = useState<Candidate[]>([])
+  const [cvsData, setCvsData] = useState<Party[]>([])
 
 
   //load data if not already loaded
@@ -51,7 +47,38 @@ function App() {
       fetch(`./data/${year}/kand.tsv`)
         .then((response) => response.text())
         .then((text) => tsvParse(text))
-        .then((parsed) => setData(prev => { return { ...prev, [year]: parsed } }))
+        .then((parsed) => {
+          const candidates: Candidate[] = parsed.map((row: DSVRowString<string>) => {
+            return {
+              ESTRANA: row.ESTRANA,
+              PORCISLO: row.PORCISLO,
+              JMENO: row.JMENO,
+              PRIJMENI: row.PRIJMENI,
+              TITULPRED: row.TITULPRED,
+              TITULZA: row.TITULZA,
+              VEK: row.VEK,
+              STATOBCAN: row.STATOBCAN,
+              POVOLANI: row.POVOLANI,
+              BYDLISTEN: row.BYDLISTEN,
+              BYDLISTEK: row.BYDLISTEK,
+              PSTRANA: row.PSTRANA,
+              NSTRANA: row.NSTRANA,
+              PLATNOST: row.PLATNOST,
+              POCHLASU: row.POCHLASU,
+              POCPROC: row.POCPROC,
+              MANDAT: row.MANDAT,
+              PORADIMAND: row.PORADIMAND,
+              PORADINAHR: row.PORADINAHR,
+              POHLAVI: row.POHLAVI,
+              ROK: row.ROK,
+              VSTRANA: row.VSTRANA,
+              NAVRHUJICI: null,
+              VOLEBNI: null,
+              PRISLUSNOST: null,
+            }
+          });
+          setData(prev => { return { ...prev, [year]: candidates } });
+        })
     }
 
     // Check if data for all years in view.years has already been fetched
@@ -72,7 +99,23 @@ function App() {
       fetch(`./data/2024/cvs.tsv`)
         .then((response) => response.text())
         .then((text) => tsvParse(text))
-        .then((parsed) => setCvsData(parsed))
+        .then((parsed) => {
+          const parties: Party[] = parsed.map((row: DSVRowString<string>) => {
+            return {
+              VSTRANA: row.VSTRANA,
+              NAZEVCELK: row.NAZEVCELK,
+              NAZEV_STRV: row.NAZEV_STRV,
+              ZKRATKAV30: row.ZKRATKAV30,
+              ZKRATKAV8: row.ZKRATKAV8,
+              POCTR_SLO: row.POCTR_SLO,
+              SLOZENI: row.SLOZENI,
+              ZKRATKA_OF: row.ZKRATKA_OF,
+              TYPVS: row.TYPVS,
+              PLNYNAZEV: row.PLNYNAZEV,
+            }
+          });
+          setCvsData(parties)
+        })
       console.log("fetched cvs")
     }
 
