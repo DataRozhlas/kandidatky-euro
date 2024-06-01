@@ -104,7 +104,7 @@ export const columns: ColumnDef<Candidate>[] = [
     },
 
     {
-        accessorKey: "NAVRHUJICI.ZKRATKAV30",
+        accessorKey: "NAVRHUJICI.ZKRATKAV8",
         header: "Navrhující strana",
     },
     {

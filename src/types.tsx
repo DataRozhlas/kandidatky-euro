@@ -1,7 +1,9 @@
 export type View = {
     years: string[]
     rank: [number, number],
-    age: [number, number]
+    age: [number, number],
+    sex: string[],
+    hasChanged: boolean
 }
 
 export type FilterPropsType = {

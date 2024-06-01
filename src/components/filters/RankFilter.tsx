@@ -20,13 +20,13 @@ export default function RankFilter(props: FilterPropsType) {
     }, [props.data])
 
     useEffect(() => {
-        if (maxRank > 0 && maxRank < props.view.rank[1]) {
+        if (maxRank > 0 && maxRank < props.view.rank[1] || !props.view.hasChanged) {
             props.setView((prev) => { return { ...prev, rank: [prev.rank[0], maxRank] } })
         }
     }, [maxRank])
     return (
-        <div>
-            <Label htmlFor={"rankFilter"}>{`Pořadí na kandidátce: ${props.view.rank[0] === props.view.rank[1] ? props.view.rank[1] : `${props.view.rank[0]} - ${props.view.rank[1]}`}`}</Label>
-            <Slider id={"rankFilter"} value={props.view.rank} min={1} max={maxRank} step={1} onValueChange={(value: [number, number]) => (props.setView((prev) => { return { ...prev, rank: value } }))} />
+        <div className="flex flex-col gap-2">
+            <Label htmlFor={"rankFilter"}>{`Pořadí na kandidátce: ${props.view.rank[0] === props.view.rank[1] ? `${props.view.rank[1]}.` : `${props.view.rank[0]}. - ${props.view.rank[1]}.`} místo`}</Label>
+            <Slider id={"rankFilter"} value={props.view.rank} min={1} max={maxRank} step={1} onValueChange={(value: [number, number]) => (props.setView((prev) => { return { ...prev, rank: value, hasChanged: true } }))} />
         </div>)
 }

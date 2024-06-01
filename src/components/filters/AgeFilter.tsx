@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 
 import { Label } from '../ui/label'
 import { Slider } from '../ui/slider'
-import { min } from "d3";
 
 
 export default function AgeFilter(props: FilterPropsType) {
@@ -24,19 +23,19 @@ export default function AgeFilter(props: FilterPropsType) {
     }, [props.data])
 
     useEffect(() => {
-        if (minMaxAge[1] > 0 && minMaxAge[1] < props.view.age[1]) {
+        if (minMaxAge[1] > 0 && (minMaxAge[1] < props.view.age[1]) || !props.view.hasChanged) {
             props.setView((prev) => { return { ...prev, age: [prev.age[0], minMaxAge[1]] } })
         }
-        if (minMaxAge[0] > 0 && minMaxAge[0] > props.view.age[0]) {
+        if (minMaxAge[0] > 0 && (minMaxAge[0] > props.view.age[0]) || !props.view.hasChanged) {
             props.setView((prev) => { return { ...prev, age: [minMaxAge[0], prev.age[1]] } })
         }
     }, [minMaxAge])
 
 
     return (
-        <div>
-            <Label htmlFor={"ageFilter"}>{`Věk kanidujících: ${props.view.age[0] === props.view.age[1] ? props.view.age[1] : `${props.view.age[0]} - ${props.view.age[1]}`}`}</Label>
-            <Slider id={"ageFilter"} value={props.view.age} min={minMaxAge[0]} max={minMaxAge[1]} step={1} onValueChange={(value: [number, number]) => (props.setView((prev) => { return { ...prev, age: value } }))} />
+        <div className="flex flex-col gap-2">
+            <Label htmlFor={"ageFilter"}>{`Věk kanidujících: ${props.view.age[0] === props.view.age[1] ? `${props.view.age[1]} let` : `${props.view.age[0]} - ${props.view.age[1]}`} let`}</Label>
+            <Slider id={"ageFilter"} value={props.view.age} min={minMaxAge[0]} max={minMaxAge[1]} step={1} onValueChange={(value: [number, number]) => (props.setView((prev) => { return { ...prev, age: value, hasChanged: true } }))} />
         </div>
     )
 }

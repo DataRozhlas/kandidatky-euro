@@ -31,8 +31,6 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination"
 
-import { Candidate } from "@/types"
-
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
