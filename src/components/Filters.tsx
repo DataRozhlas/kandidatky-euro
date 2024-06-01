@@ -1,4 +1,5 @@
 import RankFilter from "./filters/RankFilter"
+import AgeFilter from "./filters/AgeFilter"
 
 
 import { FilterPropsType } from "@/types"
@@ -11,7 +12,8 @@ export default function Filters(props: FilterPropsType) {
     }
 
     return (
-        <div>
+        <div className="w-half-minus-gap sm:w-third-minus-gap flex flex-col gap-4 p-1">
             <RankFilter {...props} />
+            <AgeFilter {...props} />
         </div>)
 }

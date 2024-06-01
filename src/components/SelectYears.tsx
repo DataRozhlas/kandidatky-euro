@@ -3,10 +3,7 @@ import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 import { Circle, CircleCheck } from "lucide-react"
 
-type View = {
-    years: string[];
-    poradi: [number, number];
-};
+import { View } from "@/types"
 
 export default function SelectYears({ years, setView, yearsAvailable }: { years: string[], setView: React.Dispatch<React.SetStateAction<View>>, yearsAvailable: string[] }) {
 

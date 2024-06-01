@@ -1,11 +1,12 @@
 export type View = {
     years: string[]
-    poradi: [number, number]
+    rank: [number, number],
+    age: [number, number]
 }
 
 export type FilterPropsType = {
     view: View;
-    setView: React.Dispatch<React.SetStateAction<{ years: string[], poradi: [number, number]; }>>;
+    setView: React.Dispatch<React.SetStateAction<View>>;
     data: Candidate[];
 }
 

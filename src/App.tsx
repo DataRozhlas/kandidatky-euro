@@ -34,7 +34,7 @@ const countUnique = (data: any[], key: string) => {
 
 function App() {
 
-  const [view, setView] = useState<View>({ years: ["2024"], poradi: [1, 28] })
+  const [view, setView] = useState<View>({ years: ["2024"], rank: [1, 28], age: [18, 100] })
   const [data, setData] = useState<{ [key: string]: Candidate[] }>({})
   const [selected, setSelected] = useState<Candidate[]>([])
   const [filtered, setFiltered] = useState<Candidate[]>([])
@@ -156,9 +156,12 @@ function App() {
 
   // filter data with greater granularity
   useEffect(() => {
-    const updated = selected.filter((row: { PORCISLO: string }) => {
+    const updated = selected.filter((row: Candidate) => {
 
-      if (Number(row.PORCISLO) >= view.poradi[0] && Number(row.PORCISLO) <= view.poradi[1]) { return true }
+      if (Number(row.PORCISLO) >= view.rank[0] && Number(row.PORCISLO) <= view.rank[1] &&
+        Number(row.VEK) >= view.age[0] && Number(row.VEK) <= view.age[1]
+      ) { return true }
+
       return false
     })
     setFiltered(updated)
