@@ -3,6 +3,7 @@ export type View = {
     rank: [number, number],
     age: [number, number],
     sex: string[],
+    search: { value: string, fields: boolean[] },
     hasChanged: boolean
 }
 

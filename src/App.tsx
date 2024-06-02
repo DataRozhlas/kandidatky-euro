@@ -34,7 +34,7 @@ const countUnique = (data: any[], key: string) => {
 
 function App() {
 
-  const [view, setView] = useState<View>({ years: ["2024"], rank: [1, 28], age: [18, 100], sex: ["M", "F"], hasChanged: false })
+  const [view, setView] = useState<View>({ years: ["2024"], rank: [1, 28], age: [18, 100], sex: ["M", "F"], hasChanged: false, search: { value: "", fields: [true, true, true] } })
   const [data, setData] = useState<{ [key: string]: Candidate[] }>({})
   const [selected, setSelected] = useState<Candidate[]>([])
   const [filtered, setFiltered] = useState<Candidate[]>([])
@@ -160,7 +160,11 @@ function App() {
 
       if (Number(row.PORCISLO) >= view.rank[0] && Number(row.PORCISLO) <= view.rank[1] &&
         Number(row.VEK) >= view.age[0] && Number(row.VEK) <= view.age[1] &&
-        (view.sex.length > 1 || view.sex.includes(row.POHLAVI))
+        (view.sex.length > 1 || view.sex.includes(row.POHLAVI)) &&
+        (view.search.value.length === 0 ||
+          (view.search.fields[0] && `${row.JMENO.toLocaleUpperCase("cs-CZ")} ${row.PRIJMENI.toLocaleUpperCase("cs-CZ")}`.includes(view.search.value)) ||
+          (view.search.fields[1] && row.POVOLANI.toLocaleUpperCase("cs-CZ").includes(view.search.value)) ||
+          (view.search.fields[2] && row.BYDLISTEN.toLocaleUpperCase("cs-CZ").includes(view.search.value)))
       ) { return true }
 
       return false
