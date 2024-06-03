@@ -4,6 +4,7 @@ export type View = {
     age: [number, number],
     sex: string[],
     search: { value: string, fields: boolean[] },
+    mandate: string,
     hasChanged: boolean
 }
 

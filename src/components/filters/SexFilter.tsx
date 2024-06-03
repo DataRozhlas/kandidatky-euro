@@ -20,8 +20,9 @@ export default function SexFilter(props: FilterPropsType) {
     }
 
     return (
-        <div>
-            <RadioGroup className="flex flex-row justify-between" value={selectedSex} onValueChange={handleValueChange}>
+        <div className="flex flex-col gap-2">
+            <Label htmlFor="sexFilter">Podle pohlaví</Label>
+            <RadioGroup id="sexFilter" className="flex flex-row justify-between" value={selectedSex} onValueChange={handleValueChange}>
                 <div className="flex items-center space-x-2">
                     <RadioGroupItem value="F" id="sexF" />
                     <Label htmlFor="sefF">Ženy</Label>

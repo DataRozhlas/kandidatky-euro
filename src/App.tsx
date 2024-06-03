@@ -34,7 +34,7 @@ const countUnique = (data: any[], key: string) => {
 
 function App() {
 
-  const [view, setView] = useState<View>({ years: ["2024"], rank: [1, 28], age: [18, 100], sex: ["M", "F"], hasChanged: false, search: { value: "", fields: [true, true, true] } })
+  const [view, setView] = useState<View>({ years: ["2024"], rank: [1, 28], age: [18, 100], sex: ["M", "F"], hasChanged: false, search: { value: "", fields: [true, true, true] }, mandate: "X" })
   const [data, setData] = useState<{ [key: string]: Candidate[] }>({})
   const [selected, setSelected] = useState<Candidate[]>([])
   const [filtered, setFiltered] = useState<Candidate[]>([])
@@ -164,7 +164,8 @@ function App() {
         (view.search.value.length === 0 ||
           (view.search.fields[0] && `${row.JMENO.toLocaleUpperCase("cs-CZ")} ${row.PRIJMENI.toLocaleUpperCase("cs-CZ")}`.includes(view.search.value)) ||
           (view.search.fields[1] && row.POVOLANI.toLocaleUpperCase("cs-CZ").includes(view.search.value)) ||
-          (view.search.fields[2] && row.BYDLISTEN.toLocaleUpperCase("cs-CZ").includes(view.search.value)))
+          (view.search.fields[2] && row.BYDLISTEN.toLocaleUpperCase("cs-CZ").includes(view.search.value))) &&
+        (view.mandate === "X" || row.MANDAT === view.mandate || view.mandate === "P" && row.MANDAT === "A" && Number(row.POCPROC) >= 5)
       ) { return true }
 
       return false

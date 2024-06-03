@@ -11,7 +11,7 @@ export default function FiltersDesktop(props: FilterPropsType) {
             <div className="flex items-center justify-between pb-3">
                 <Label htmlFor="filters">Nastavte filtry</Label>
             </div>
-            <ScrollArea className="h-[200px] w-full rounded-lg border p-4">
+            <ScrollArea className="w-full rounded-lg border p-6">
                 <Filters {...props} />
             </ScrollArea>
         </div>

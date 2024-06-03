@@ -2,9 +2,10 @@ import RankFilter from "./filters/RankFilter"
 import AgeFilter from "./filters/AgeFilter"
 import SexFilter from "./filters/SexFilter"
 import SearchFilter from "./filters/SearchFilter"
-
+import MandateFilter from "./filters/MandateFilter"
 
 import { FilterPropsType } from "@/types"
+
 
 export default function Filters(props: FilterPropsType) {
 
@@ -14,10 +15,23 @@ export default function Filters(props: FilterPropsType) {
     }
 
     return (
-        <div className="w-half-minus-gap sm:w-third-minus-gap flex flex-col gap-10 p-1">
-            <SearchFilter {...props} />
-            <SexFilter {...props} />
-            <RankFilter {...props} />
-            <AgeFilter {...props} />
-        </div>)
+        <div className="flex flex-wrap justify-evenly gap-10">
+            <div className="flex flex-col gap-20 w-full sm:w-[46%] lg:w-[30%]">
+                <SearchFilter {...props} />
+                <SexFilter {...props} />
+            </div>
+            <div className="flex flex-col gap-10 w-full sm:w-[46%] lg:w-[30%]">
+
+                <RankFilter {...props} />
+                <AgeFilter {...props} />
+                <MandateFilter {...props} />
+
+
+            </div>
+            <div className="flex flex-col gap-6 w-full sm:w-[46%] lg:w-[30%]">
+                <SearchFilter {...props} />
+
+            </div>
+        </div>
+    )
 }
