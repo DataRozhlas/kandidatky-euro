@@ -3,6 +3,7 @@ import AgeFilter from "./filters/AgeFilter"
 import SexFilter from "./filters/SexFilter"
 import SearchFilter from "./filters/SearchFilter"
 import MandateFilter from "./filters/MandateFilter"
+import PartyFilter from "./filters/PartyFilter"
 
 import { FilterPropsType } from "@/types"
 
@@ -29,7 +30,7 @@ export default function Filters(props: FilterPropsType) {
 
             </div>
             <div className="flex flex-col gap-6 w-full sm:w-[46%] lg:w-[30%]">
-                <SearchFilter {...props} />
+                <PartyFilter {...props} />
 
             </div>
         </div>

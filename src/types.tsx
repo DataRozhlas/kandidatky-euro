@@ -5,6 +5,7 @@ export type View = {
     sex: string[],
     search: { value: string, fields: boolean[] },
     mandate: string,
+    parties: string[],
     hasChanged: boolean
 }
 

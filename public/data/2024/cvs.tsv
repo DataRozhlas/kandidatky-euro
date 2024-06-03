@@ -294,6 +294,7 @@ VSTRANA	NAZEVCELK	NAZEV_STRV	ZKRATKAV30	ZKRATKAV8	POCSTR_SLO	SLOZENI	ZKRATKA_OF	
 309	Koalice KDU-ČSL, Moravané	Koalice KDU-ČSL, Moravané	Koalice KDU-ČSL, Moravané	KDU-ČSL+Morav.	2	001,083		K	
 310	Národní koalice	Národní koalice	Národní koalice	NARKOAL	2	002,152		K	
 311	Koalice SNK ED a SD-SN	Koalice SNK ED a SD-SN	Koalice SNK ED, SD-SN	SNK ED+SD-SN	2	129,143		K	
+312	Za zájmy Moravy ve sjednocené Evropě	Za zájmy Moravy ve sjednocené Evropě	Za zájmy Moravy ve sjedn.Evr.	HSMSMoDS	2	082,083		K	
 313	Unie liberálních demokratů	Unie liberálních demokratů	Unie liberálních demokratů	ULD	4	013,102,133,138		K	
 314	Unie Prahy 4	Unie Prahy 4	Unie Prahy 4	Unie-P4	3	001,102,143		K	
 315	Koalice Zelení a LIB	Koalice Zelení a LIB	Koalice Zelení, LIB	Zelení+LIB	2	005,138		K	
@@ -535,6 +536,7 @@ VSTRANA	NAZEVCELK	NAZEV_STRV	ZKRATKAV30	ZKRATKAV8	POCSTR_SLO	SLOZENI	ZKRATKA_OF	
 572	Sdružení KDU-ČSL, ZVUK 12, NK	Sdružení KDU-ČSL, ZVUK 12, NK	Sdružení KDU-ČSL, ZVUK 12, NK	KDU+ZVUK 12+NK	3	001,080,775		D	
 573	Sdružení SOCDEM, SPOZ, NK	Sdružení SOCDEM, SPOZ, NK	Sdružení SOCDEM, SPOZ, NK	SOCDEM+SPOZ+NK	3	007,080,724		D	
 574	Sdružení Zelení, SNK ED, Piráti, NK	Sdružení Zelení, SNK ED, Piráti, NK	Sdr. Zelení,SNK ED,Piráti,NK	Ze+SNKED+Pir+NK	4	005,080,129,720		D	
+575	Dělnická strana sociální spravedlnosti - NE diktátu Bruselu!	Koalice DSSS a SPE	Koalice DSSS a SPE	Koal.DSSS a SPE	2	156,761	Koalice DSSS a SPE	K	
 576	Koalice SSPD-SP a NO!	Koalice SSPD-SP a NO!	Koalice SSPD-SP, NO!	SSPD-SP+NO!	2	159,197		K	
 577	Koalice STAN, SLK, TOP 09	Koalice STAN, SLK, TOP 09	Koalice STAN, SLK, TOP 09	STSLKTOP	3	166,703,721		K	
 578	Koalice KDU-ČSL, Zelení a OCJJ	Koalice KDU-ČSL, Zelení a OCJJ	Koalice KDU-ČSL, Zelení, OCJJ	KDUČSL+Zel+OCJJ	3	001,005,743		K	
@@ -599,6 +601,7 @@ VSTRANA	NAZEVCELK	NAZEV_STRV	ZKRATKAV30	ZKRATKAV8	POCSTR_SLO	SLOZENI	ZKRATKA_OF	
 644	Koalice US-DEU, SOS a VPM	Koalice US-DEU, SOS a VPM	Koalice US-DEU, SOS a VPM	USSOSVPM	3	102,103,113		K	
 649	Koalice US-DEU a KAN	Koalice US-DEU a KAN	Koalice US-DEU a KAN	USDEUKAN	2	040,102		K	
 654	Koalice Rozumní a HLAVU VZHŮRU	Koalice Rozumní a HLAVU VZHŮRU	Koalice Rozumní, HLAVU VZHŮRU	Rozum+HLAVU VZH	2	137,192		K	
+655	Nejen hasiči a živnostníci s učiteli do Evropy - www.hnpd.cz, www.sdzp.cz	Nejen hasiči a živnostníci s učiteli do Evropy	Nejen has. a živn. s uč. do E.	HNDPSDZP	2	165,167		K	
 656	Koalice STAN a ALTERNATIVA	Koalice STAN a ALTERNATIVA	Koalice STAN, ALTERNATIVA	STAN+ALTERNAT.	2	166,702		K	
 657	Koalice Rozumní a NEZ/DEM	Koalice Rozumní a NEZ/DEM	Koalice Rozumní a NEZ/DEM	Rozumní+NEZ/DEM	2	137,172		K	
 659	Koalice STAN, TOP 09	Koalice STAN, TOP 09	Koalice STAN, TOP 09	TOP+STAN	2	166,721		K	

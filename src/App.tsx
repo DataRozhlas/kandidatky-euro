@@ -34,11 +34,12 @@ const countUnique = (data: any[], key: string) => {
 
 function App() {
 
-  const [view, setView] = useState<View>({ years: ["2024"], rank: [1, 28], age: [18, 100], sex: ["M", "F"], hasChanged: false, search: { value: "", fields: [true, true, true] }, mandate: "X" })
+  const [view, setView] = useState<View>({ years: ["2024"], rank: [1, 28], age: [18, 100], sex: ["M", "F"], search: { value: "", fields: [true, true, true] }, mandate: "X", parties: [], hasChanged: false })
   const [data, setData] = useState<{ [key: string]: Candidate[] }>({})
   const [selected, setSelected] = useState<Candidate[]>([])
   const [filtered, setFiltered] = useState<Candidate[]>([])
   const [cvsData, setCvsData] = useState<Party[]>([])
+  const [loading, setLoading] = useState<boolean>(true)
 
 
   //load data if not already loaded
@@ -91,11 +92,13 @@ function App() {
 
     view.years.forEach(async (year) => {
       if (data[year]) return;
+      setLoading(true)
       fetchData(year)
       console.log("fetched", year)
     })
 
     if (cvsData.length === 0) {
+      setLoading(true)
       fetch(`./data/2024/cvs.tsv`)
         .then((response) => response.text())
         .then((text) => tsvParse(text))
@@ -139,6 +142,7 @@ function App() {
 
         })
         console.log("joined", year)
+        setLoading(false)
       }
     })
   }, [data, cvsData])
@@ -178,7 +182,7 @@ function App() {
     <>
       {<div className="max-w-[1070px] mx-auto flex flex-col gap-5">
         <SelectYears years={view.years} setView={setView} yearsAvailable={yearsAvailable} />
-        <FiltersDesktop data={selected} view={view} setView={setView} />
+        {!loading && <FiltersDesktop data={selected} view={view} setView={setView} />}
         <div className="flex flex-row flex-wrap lg:flex-nowrap justify-center gap-1">
           <Stat title="Celkem" number={selected.length.toLocaleString("cs-CZ")} subtitle="kandidujících" icon="user" />
           <Stat title="Vybráno" number={(filtered.length).toLocaleString("cs-CZ")} subtitle="kandidujících" icon="user-check" />
