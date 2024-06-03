@@ -34,7 +34,7 @@ export default function AgeFilter(props: FilterPropsType) {
 
     return (
         <div className="flex flex-col gap-2">
-            <Label htmlFor={"ageFilter"}>{`Věk kanidujících: ${props.view.age[0] === props.view.age[1] ? `${props.view.age[1]} let` : `${props.view.age[0]} - ${props.view.age[1]}`} let`}</Label>
+            <Label htmlFor={"ageFilter"}>{`Věk kandidujících: ${props.view.age[0] === props.view.age[1] ? `${props.view.age[1]} let` : `${props.view.age[0]} - ${props.view.age[1]}`} let`}</Label>
             <Slider id={"ageFilter"} value={props.view.age} min={minMaxAge[0]} max={minMaxAge[1]} step={1} onValueChange={(value: [number, number]) => (props.setView((prev) => { return { ...prev, age: value, hasChanged: true } }))} />
         </div>
     )

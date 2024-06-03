@@ -98,7 +98,7 @@ export function DataTable<TData, TValue>({
         <PaginationEllipsis />
       </PaginationItem> */}
           <PaginationItem className="text-xs">
-            Stránka {pagination.pageIndex + 1} z {table.getPageCount()}
+            {`Stránka ${pagination.pageIndex + 1} ${table.getPageCount() > 0 ? `z ${table.getPageCount()}` : ""}`}
           </PaginationItem>
           <PaginationItem>
             <PaginationNext href="#" onClick={(e) => { e.preventDefault(); table.nextPage() }} className={!table.getCanNextPage() ? "invisible" : ""} />
