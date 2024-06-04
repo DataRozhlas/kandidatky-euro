@@ -189,7 +189,7 @@ function App() {
 
 
   return (
-    <div ref={containerRef} className="max-w-[1070px] mx-auto flex flex-col gap-5">
+    <div ref={containerRef} className="max-w-[1070px] mx-auto flex flex-col gap-5 mb-8">
       <SelectYears years={view.years} setView={setView} yearsAvailable={yearsAvailable} />
       <Filters data={selected} view={view} setView={setView} />
       <div className="flex flex-row flex-wrap lg:flex-nowrap justify-center gap-1">
