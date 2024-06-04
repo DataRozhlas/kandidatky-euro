@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        "sm": "550px",
+      },
       width: {
         'half-minus-gap': 'calc(50% - 0.125rem)',
         'third-minus-gap': 'calc(33.333333% - 0.25rem)'

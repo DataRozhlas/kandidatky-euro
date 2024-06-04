@@ -8,13 +8,14 @@ import PartyFilter from "./filters/PartyFilter"
 import { Label } from "@/components/ui/label"
 import { Card } from "./ui/card"
 
+
 import { FilterPropsType } from "@/types"
 
 
 export default function Filters(props: FilterPropsType) {
 
     return (
-        <div className="flex flex-col gap-3">
+        <div className="hidden sm:flex flex-col gap-3">
             <Label htmlFor="filters">Nastavte filtry</Label>
             <Card id="filters" className="w-full rounded-lg border p-6">
                 {props.data.length === 0 && <div className="text-sm text-center">Nejdřív vyberte aspoň jeden rok</div>}
@@ -37,5 +38,6 @@ export default function Filters(props: FilterPropsType) {
                     </div>
                 </div>}
             </Card>
-        </div>)
+        </div>
+    )
 }

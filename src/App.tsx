@@ -5,6 +5,7 @@ import { DSVRowString, tsvParse } from "d3"
 import Stat from "@/components/Stat"
 import SelectYears from "@/components/SelectYears"
 import Filters from "@/components/Filters"
+import MobileFilters from "@/components/MobileFilters"
 import { DataTable } from "@/components/DataTable"
 import { columns } from "./components/columns"
 
@@ -198,6 +199,7 @@ function App() {
         <Stat title="Průměrný věk" number={countAverageAge(filtered)} subtitle="u vybraných" icon="clock" />
         <Stat title="Volebních stran" number={countUnique(filtered, "VSTRANA")} subtitle="koalice = 1 strana" icon="vote" />
       </div>
+      <MobileFilters data={selected} view={view} setView={setView} />
       <DataTable columns={columns} data={filtered} years={view.years} />
 
     </div>
