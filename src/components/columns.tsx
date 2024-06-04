@@ -25,7 +25,7 @@ export const columns: ColumnDef<Candidate>[] = [
             )
         },
         cell: ({ row }: { row: any }) => {
-            return (<div className="text-center">{row.getValue("PORCISLO")}</div>)
+            return (<div className="text-center">{Number(row.getValue("PORCISLO"))}</div>)
         },
 
     },
@@ -113,7 +113,7 @@ export const columns: ColumnDef<Candidate>[] = [
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
-                    Preferenční hlasy
+                    Pref.<br />hlasy
                     <ArrowUpDown className="ml-2 h-4 w-4" />
                 </Button>
             )
@@ -131,7 +131,7 @@ export const columns: ColumnDef<Candidate>[] = [
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
-                    Preferenční hlasy
+                    Pref<br />%
                     <ArrowUpDown className="ml-2 h-4 w-4" />
                 </Button>
             )
