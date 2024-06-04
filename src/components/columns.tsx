@@ -19,7 +19,7 @@ export const columns: ColumnDef<Candidate>[] = [
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
-                    #
+                    Číslo na<br />kandidátce
                     <ArrowUpDown className="ml-2 h-4 w-4" />
                 </Button>
             )
@@ -28,6 +28,27 @@ export const columns: ColumnDef<Candidate>[] = [
             return (<div className="text-center">{Number(row.getValue("PORCISLO"))}</div>)
         },
 
+    },
+    {
+        accessorKey: "ESTRANA",
+        header: ({ column }) => {
+            return (
+                <Button
+                    variant="ghost"
+                    onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+                >
+                    Číslo<br />strany
+                    <ArrowUpDown className="ml-2 h-4 w-4" />
+                </Button>
+            )
+        },
+        cell: ({ row }: { row: any }) => {
+            return (<div className="text-center">{Number(row.getValue("ESTRANA"))}</div>)
+        },
+    },
+    {
+        accessorKey: "MANDAT",
+        header: "Mandát",
     },
     {
         accessorKey: "JMENO",

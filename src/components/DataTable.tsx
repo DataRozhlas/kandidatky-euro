@@ -41,14 +41,16 @@ export function DataTable<TData, TValue>({
   data,
   years,
 }: DataTableProps<TData, TValue>) {
-  const [sorting, setSorting] = React.useState<SortingState>([])
+  //  const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnVisibility, setColumnVisibility] = React.useState({
     JMENO: false,
     TITULPRED: false,
     TITULZA: false,
     POHLAVI: false,
     ROK: years.length > 1,
-    STATOBCAN: false
+    STATOBCAN: false,
+    MANDAT: false,
+    ESTRANA: false,
   })
   const [pagination, setPagination] = React.useState({
     pageIndex: 0, //initial page index
@@ -61,10 +63,18 @@ export function DataTable<TData, TValue>({
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     onPaginationChange: setPagination, //update the pagination state when internal APIs mutate the pagination state
-    onSortingChange: setSorting,
+    // onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
+    initialState: {
+      sorting: [
+        {
+          id: "PORCISLO",
+          desc: false,
+        }
+      ],
+    },
     state: {
-      sorting,
+      //   sorting,
       columnVisibility,
       pagination,
     }
@@ -133,7 +143,7 @@ export function DataTable<TData, TValue>({
                   data-state={row.getIsSelected() && "selected"}
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
+                    <TableCell key={cell.id} className="p-2">
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </TableCell>
                   ))}
