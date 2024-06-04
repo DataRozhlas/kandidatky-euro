@@ -6,8 +6,8 @@ export type View = {
     search: { value: string, fields: boolean[] },
     mandate: string,
     parties: string[],
-    partiesHasChanged: boolean,
-    hasChanged: boolean
+    // partiesHasChanged: boolean,
+    //  hasChanged: boolean
 }
 
 export type FilterPropsType = {

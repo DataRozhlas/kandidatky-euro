@@ -9,7 +9,6 @@ import { Label } from "@/components/ui/label"
 import { Card } from "./ui/card"
 
 import { FilterPropsType } from "@/types"
-import { ScrollArea } from "./ui/scroll-area"
 
 
 export default function Filters(props: FilterPropsType) {
@@ -21,11 +20,11 @@ export default function Filters(props: FilterPropsType) {
                 {props.data.length === 0 && <div className="text-sm text-center">Nejdřív vyberte aspoň jeden rok</div>}
                 {props.data.length > 0 && <div className="flex flex-wrap justify-evenly gap-10 ">
 
-                    <div className="flex flex-col justify-evenly gap-20 w-full sm:w-[46%] lg:w-[30%] sm:h-56">
+                    <div className="flex flex-col justify-between  w-full sm:w-[46%] lg:w-[30%] sm:h-56">
                         <SearchFilter {...props} />
                         <SexFilter {...props} />
                     </div>
-                    <div className="flex flex-col justify-evenly gap-10 w-full sm:w-[46%] lg:w-[30%] sm:h-56">
+                    <div className="flex flex-col justify-between  w-full sm:w-[46%] lg:w-[30%] sm:h-56">
 
                         <RankFilter {...props} />
                         <AgeFilter {...props} />
@@ -33,12 +32,8 @@ export default function Filters(props: FilterPropsType) {
 
 
                     </div>
-                    <div className="flex flex-col gap-6 w-full sm:w-[46%] lg:w-[30%] sm:h-56">
-                        <ScrollArea className="">
-                            <PartyFilter {...props} />
-                        </ScrollArea>
-
-
+                    <div className="flex flex-col justify-between w-full sm:w-[46%] lg:w-[30%] sm:h-56">
+                        <PartyFilter {...props} />
                     </div>
                 </div>}
             </Card>
