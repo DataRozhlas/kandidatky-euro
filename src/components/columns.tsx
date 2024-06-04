@@ -2,6 +2,12 @@ import { ColumnDef } from "@tanstack/react-table"
 import { ArrowUpDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip"
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
 import { Candidate } from "@/types"
@@ -116,15 +122,57 @@ export const columns: ColumnDef<Candidate>[] = [
     {
         accessorKey: "BYDLISTEN",
         header: "Bydliště",
+        cell: ({ row }: { row: any }) => {
+            return (<div className="text-center">{row.getValue("BYDLISTEN")}</div>)
+        },
     },
     {
-        accessorKey: "VOLEBNI.ZKRATKAV30",
+        accessorKey: "VOLEBNI.NAZEVCELK",
+        id: "VNC",
+    },
+    {
+        accessorKey: "VOLEBNI.NAZEV_STRV",
+        id: "VPN",
         header: "Volební strana",
+        cell: ({ row }: { row: any }) => {
+            return (<div className="text-center">
+                <TooltipProvider>
+                    <Tooltip>
+                        <TooltipTrigger>
+                            <div>{row.getValue("VPN")}</div>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                            {row.getValue("VNC")}
+                        </TooltipContent>
+                    </Tooltip>
+                </TooltipProvider>
+            </div>)
+        },
+    },
+    {
+        accessorKey: "NAVRHUJICI.NAZEV_STRV",
+        id: "NPN",
+        header: "Navrhující plný název",
     },
 
     {
         accessorKey: "NAVRHUJICI.ZKRATKAV8",
-        header: "Navrhující strana",
+        id: "NZ8",
+        header: "Navrhující",
+        cell: ({ row }: { row: any }) => {
+            return (<div className="text-center">
+                <TooltipProvider>
+                    <Tooltip>
+                        <TooltipTrigger>
+                            <div>{row.getValue("NZ8")}</div>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                            {row.getValue("NPN")}
+                        </TooltipContent>
+                    </Tooltip>
+                </TooltipProvider>
+            </div>)
+        },
     },
     {
         accessorKey: "POCHLASU",

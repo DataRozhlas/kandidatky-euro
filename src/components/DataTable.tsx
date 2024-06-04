@@ -51,6 +51,8 @@ export function DataTable<TData, TValue>({
     STATOBCAN: false,
     MANDAT: false,
     ESTRANA: false,
+    NPN: false,
+    VNC: false,
   })
   const [pagination, setPagination] = React.useState({
     pageIndex: 0, //initial page index
