@@ -19,7 +19,7 @@ export const columns: ColumnDef<Candidate>[] = [
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
-                    Číslo na<br />kandidátce
+                    #
                     <ArrowUpDown className="ml-2 h-4 w-4" />
                 </Button>
             )
@@ -134,7 +134,7 @@ export const columns: ColumnDef<Candidate>[] = [
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
-                    Pref.<br />hlasy
+                    Pref.<br />hl.
                     <ArrowUpDown className="ml-2 h-4 w-4" />
                 </Button>
             )
@@ -152,7 +152,7 @@ export const columns: ColumnDef<Candidate>[] = [
                     variant="ghost"
                     onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
-                    Pref<br />%
+                    Pref.<br />%
                     <ArrowUpDown className="ml-2 h-4 w-4" />
                 </Button>
             )

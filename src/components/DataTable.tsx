@@ -2,7 +2,7 @@ import * as React from "react"
 
 import {
   ColumnDef,
-  SortingState,
+  // SortingState,
   flexRender,
   getCoreRowModel,
   getPaginationRowModel,
