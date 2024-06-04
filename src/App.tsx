@@ -10,6 +10,8 @@ import { columns } from "./components/columns"
 
 import { View, Candidate, Party } from "@/types"
 
+import { usePostMessageWithHeight } from './hooks/usePostHeightMessage'
+
 const yearsAvailable = ["2004", "2009", "2014", "2019", "2024"]
 
 const countFemaleRatio = (data: any[]) => {
@@ -40,6 +42,12 @@ function App() {
   const [filtered, setFiltered] = useState<Candidate[]>([])
   const [cvsData, setCvsData] = useState<Party[]>([])
   //const [loading, setLoading] = useState<boolean>(true)
+
+  const { containerRef, postHeightMessage } = usePostMessageWithHeight(`kandidatky-euro-24`)
+
+  useEffect(() => {
+    postHeightMessage()
+  }, [filtered])
 
 
   //load data if not already loaded
@@ -180,21 +188,20 @@ function App() {
 
 
   return (
-    <>
-      {<div className="max-w-[1070px] mx-auto flex flex-col gap-5">
-        <SelectYears years={view.years} setView={setView} yearsAvailable={yearsAvailable} />
-        <Filters data={selected} view={view} setView={setView} />
-        <div className="flex flex-row flex-wrap lg:flex-nowrap justify-center gap-1">
-          <Stat title="Celkem" number={selected.length.toLocaleString("cs-CZ")} subtitle="kandidujících" icon="user" />
-          <Stat title="Vybráno" number={(filtered.length).toLocaleString("cs-CZ")} subtitle="kandidujících" icon="user-check" />
-          <Stat title="Podíl žen" number={countFemaleRatio(filtered)} subtitle="z vybraných" icon="female" />
-          <Stat title="Průměrný věk" number={countAverageAge(filtered)} subtitle="u vybraných" icon="clock" />
-          <Stat title="Volebních stran" number={countUnique(filtered, "VSTRANA")} subtitle="koalice = 1 strana" icon="vote" />
-        </div>
-        <DataTable columns={columns} data={filtered} years={view.years} />
+    <div ref={containerRef} className="max-w-[1070px] mx-auto flex flex-col gap-5">
+      <SelectYears years={view.years} setView={setView} yearsAvailable={yearsAvailable} />
+      <Filters data={selected} view={view} setView={setView} />
+      <div className="flex flex-row flex-wrap lg:flex-nowrap justify-center gap-1">
+        <Stat title="Celkem" number={selected.length.toLocaleString("cs-CZ")} subtitle="kandidujících" icon="user" />
+        <Stat title="Vybráno" number={(filtered.length).toLocaleString("cs-CZ")} subtitle="kandidujících" icon="user-check" />
+        <Stat title="Podíl žen" number={countFemaleRatio(filtered)} subtitle="z vybraných" icon="female" />
+        <Stat title="Průměrný věk" number={countAverageAge(filtered)} subtitle="u vybraných" icon="clock" />
+        <Stat title="Volebních stran" number={countUnique(filtered, "VSTRANA")} subtitle="koalice = 1 strana" icon="vote" />
+      </div>
+      <DataTable columns={columns} data={filtered} years={view.years} />
 
-      </div>}
-    </>
+    </div>
+
   )
 }
 
