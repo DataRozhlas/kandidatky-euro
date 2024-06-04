@@ -169,7 +169,7 @@ function App() {
           (view.search.fields[0] && `${row.JMENO.toLocaleUpperCase("cs-CZ")} ${row.PRIJMENI.toLocaleUpperCase("cs-CZ")}`.includes(view.search.value)) ||
           (view.search.fields[1] && row.POVOLANI.toLocaleUpperCase("cs-CZ").includes(view.search.value)) ||
           (view.search.fields[2] && row.BYDLISTEN.toLocaleUpperCase("cs-CZ").includes(view.search.value))) &&
-        (view.mandate === "X" || row.MANDAT === view.mandate || view.mandate === "P" && row.MANDAT === "A" && Number(row.POCPROC) >= 5) &&
+        (view.mandate === "X" || row.MANDAT === view.mandate || view.mandate === "P" && row.MANDAT === "A" && Number(row.POCPROC) >= 5 && Number(row.PORADIMAND) < Number(row.PORCISLO)) &&
         (view.parties.length === 0 || view.parties.includes(row.VSTRANA))
       ) { return true }
 
