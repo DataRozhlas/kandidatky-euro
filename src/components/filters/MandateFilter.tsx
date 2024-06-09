@@ -1,15 +1,12 @@
 import { FilterPropsType } from "../../types";
-import { useState } from "react";
 
 import { Label } from "../ui/label";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 
 
 export default function MandateFilter(props: FilterPropsType) {
-    const [selectedMandate, setSelectedMandate] = useState<string>("X")
 
     const handleValueChange = (value: string) => {
-        setSelectedMandate(value)
         props.setView((prev) => {
             return {
                 ...prev,
@@ -21,7 +18,7 @@ export default function MandateFilter(props: FilterPropsType) {
     return (
         <div className="flex flex-col gap-2">
             <Label htmlFor="mandateFilter">Podle mandátu</Label>
-            <RadioGroup id="mandateFilter" className="grid grid-cols-2" value={selectedMandate} onValueChange={handleValueChange}>
+            <RadioGroup id="mandateFilter" className="grid grid-cols-2" value={props.view.mandate} onValueChange={handleValueChange}>
                 <div className="flex items-center space-x-2">
                     <RadioGroupItem value="A" id="mandateA" />
                     <Label htmlFor="mandateA">Získali mandát</Label>
